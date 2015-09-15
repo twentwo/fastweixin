@@ -10,6 +10,7 @@ import com.github.sd4324530.fastweixin.util.StrUtil;
 import org.apache.http.client.utils.DateUtils;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -29,8 +30,8 @@ public class FastweixinTest {
     public void init() {
 //        String appid = "wx8c33ff895df5d0d9";
 //        String secret = "0705aafac0bef944de4c485d71fce900";
-        String appid = "wx337021cfcc3e32fb";
-        String secret = "e244f1244f0ba2798546e0450d3045ea";
+        String appid = "wxe18cd32bf2c82c4b";
+        String secret = "c10fc34f427d78bba8d01c681be9ecbf";
         config = new ApiConfig(appid, secret);
         TestConfigChangeHandle configChangeHandle = new TestConfigChangeHandle();
         config.addHandle(configChangeHandle);
@@ -40,19 +41,19 @@ public class FastweixinTest {
      *AppID(应用ID)wx8c33ff895df5d0d9
      *AppSecret(应用密钥)0705aafac0bef944de4c485d71fce900
      */
-//    @Test
+    @Test
     public void test() {
-        String appid = "wx8c33ff895df5d0d9";
-        String secret = "0705aafac0bef944de4c485d71fce900";
+        String appid = "wxe18cd32bf2c82c4b";
+        String secret = "c10fc34f427d78bba8d01c681be9ecbf";
         ApiConfig config = new ApiConfig(appid, secret);
         TestConfigChangeHandle configChangeHandle = new TestConfigChangeHandle();
         config.addHandle(configChangeHandle);
 //        createMenu(config);
-//        getUserList(config);
+        getUserList(config);
 //        uploadMedia(config);
 //        downloadMedia(config);
 //        getUserInfo(config);
-        getMenu(config);
+//        getMenu(config);
 //        addCustomAccount(config);
 //        getOauthPageUrl(config);
 //        getToken(config);
@@ -138,7 +139,7 @@ public class FastweixinTest {
      */
     public void getUserInfo(ApiConfig config) {
         UserAPI userAPI = new UserAPI(config);
-        GetUserInfoResponse userInfo = userAPI.getUserInfo("opZYwt-OS8WFxwU-colRzpu50eOQ");
+        GetUserInfoResponse userInfo = userAPI.getUserInfo("oKUZXxPkWz74C_yQDU83l0fikbuc");
         LOG.debug(userInfo.toJsonString());
     }
 
